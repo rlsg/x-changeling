@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C17DA11-DFE2-499D-BD57-66ED264486BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Changeling</RootNamespace>
+    <AssemblyName>Changeling</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Roger L.S. Griffiths\Documents\Mods\X3TC\Changeling\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://forum.egosoft.com/viewtopic.php%3fp=3245591#3245591</SupportUrl>
+    <ErrorReportUrl>http://forum.egosoft.com/viewtopic.php%3fp=3245591#3245591</ErrorReportUrl>
+    <TargetCulture>en-GB</TargetCulture>
+    <ProductName>Changeling - X3TC Editor and Change Manager</ProductName>
+    <PublisherName>Roger L.S. Griffiths</PublisherName>
+    <SuiteName>X3TC Modding Tools</SuiteName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.8.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Changeling.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>96BDB2744A896C060B209F0423C159548C33B2A8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Changeling_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Changeling.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExscriptorLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ExscriptorLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Lib\IConfig.cs" />
+    <Compile Include="Lib\X3AP\Configuration.cs" />
+    <Compile Include="Lib\X3AP\IConfig.cs" />
+    <Compile Include="Lib\X3AP\SpecBullet.cs" />
+    <Compile Include="Lib\X3AP\SpecBulletList.cs" />
+    <Compile Include="Lib\X3AP\SpecMissile.cs" />
+    <Compile Include="Lib\X3TC\ConfigDatum.cs" />
+    <Compile Include="Lib\X3TC\ConfigDatumList.cs" />
+    <Compile Include="Lib\X3TC\Modification.cs" />
+    <Compile Include="Lib\X3TC\ModificationList.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutCargo.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutCargoList.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutEquipment.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutEquipmentList.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutLaser.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutLaserList.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutMissile.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutMissileList.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutWareList.cs" />
+    <Compile Include="Lib\VFSInterface.cs" />
+    <Compile Include="Lib\X3TC\ChangePackage.cs" />
+    <Compile Include="Lib\X3TC\ChangePackageList.cs" />
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\FileDetails.cs" />
+    <Compile Include="Lib\FileDetailsList.cs" />
+    <Compile Include="XmlEditorFormAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XmlEditorFormAttribute.Designer.cs">
+      <DependentUpon>XmlEditorFormAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\X3TC\GlobalMARS.cs" />
+    <Compile Include="Lib\NumericD.cs" />
+    <Compile Include="Lib\NumericI.cs" />
+    <Compile Include="Lib\ConfigDatum.cs" />
+    <Compile Include="Lib\ConfigDatumList.cs" />
+    <Compile Include="Lib\Numeric.cs" />
+    <Compile Include="Lib\X3TC\IConfig.cs" />
+    <Compile Include="Lib\NumericFP.cs" />
+    <Compile Include="Lib\X3TC\SpecFactoryList.cs" />
+    <Compile Include="Lib\X3TC\SpecDockList.cs" />
+    <Compile Include="Lib\X3TC\SpecFactory.cs" />
+    <Compile Include="Lib\X3TC\SpecDock.cs" />
+    <Compile Include="Lib\X3TC\CriteriaLaserList.cs" />
+    <Compile Include="Lib\X3TC\CriteriaMissileList.cs" />
+    <Compile Include="Lib\X3TC\CriteriaRaceList.cs" />
+    <Compile Include="FormChangePackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePackage.Designer.cs">
+      <DependentUpon>FormChangePackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectMissiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectMissiles.Designer.cs">
+      <DependentUpon>FormSelectMissiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCriteriaLaser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCriteriaLaser.Designer.cs">
+      <DependentUpon>FormCriteriaLaser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectLasers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectLasers.Designer.cs">
+      <DependentUpon>FormSelectLasers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectRace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectRace.Designer.cs">
+      <DependentUpon>FormSelectRace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSpecMissile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSpecMissile.Designer.cs">
+      <DependentUpon>FormSpecMissile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSpecLaser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSpecLaser.Designer.cs">
+      <DependentUpon>FormSpecLaser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Location.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadout.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutList.cs" />
+    <Compile Include="Lib\X3TC\ShipLoadoutWare.cs" />
+    <Compile Include="Lib\X3TC\SpecBullet.cs" />
+    <Compile Include="Lib\X3TC\SpecBulletList.cs" />
+    <Compile Include="Lib\X3TC\SpecCockpit.cs" />
+    <Compile Include="Lib\X3TC\Configuration.cs" />
+    <Compile Include="Lib\X3TC\SpecCockpitList.cs" />
+    <Compile Include="Lib\X3TC\SpecLaser.cs" />
+    <Compile Include="Lib\X3TC\CriteriaLaser.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\X3TC\CriteriaMissile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Lib\X3TC\CriteriaRace.cs" />
+    <Compile Include="Lib\X3TC\Spec.cs" />
+    <Compile Include="Lib\X3TC\SpecLaserList.cs" />
+    <Compile Include="Lib\X3TC\SpecList.cs" />
+    <Compile Include="Lib\X3TC\SpecMissileList.cs" />
+    <Compile Include="Lib\X3TC\SpecShipList.cs" />
+    <Compile Include="Lib\X3TC\SpecWare.cs" />
+    <Compile Include="Lib\X3TC\SpecWareBio.cs" />
+    <Compile Include="Lib\X3TC\SpecWareBioList.cs" />
+    <Compile Include="Lib\X3TC\SpecWareEnergy.cs" />
+    <Compile Include="Lib\X3TC\SpecWareEnergyList.cs" />
+    <Compile Include="Lib\X3TC\SpecWareFood.cs" />
+    <Compile Include="Lib\X3TC\SpecWareFoodList.cs" />
+    <Compile Include="Lib\X3TC\SpecWareMineral.cs" />
+    <Compile Include="Lib\X3TC\SpecMissile.cs" />
+    <Compile Include="Lib\X3TC\SpecWareMineralList.cs" />
+    <Compile Include="Lib\X3TC\SpecWareNatural.cs" />
+    <Compile Include="Lib\X3TC\SpecShip.cs" />
+    <Compile Include="Lib\X3TC\SpecWareNaturalList.cs" />
+    <Compile Include="Lib\X3TC\SpecWareTech.cs" />
+    <Compile Include="Lib\X3TC\SpecWareTechList.cs" />
+    <Compile Include="Lib\X3TC\Start.cs" />
+    <Compile Include="Lib\X3TC\StartList.cs" />
+    <Compile Include="Lib\TextDatabase.cs" />
+    <Compile Include="Lib\TextEntry.cs" />
+    <Compile Include="Lib\TextEntryTranslated.cs" />
+    <Compile Include="Lib\TextEntryTranslatedPages.cs" />
+    <Compile Include="DS\X2Core\x2fd.cs" />
+    <Compile Include="DS\X2Core\x3vfs.cs" />
+    <Compile Include="XmlEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XmlEditorForm.Designer.cs">
+      <DependentUpon>XmlEditorForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XmlEditorFormAttribute.resx">
+      <DependentUpon>XmlEditorFormAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePackage.resx">
+      <DependentUpon>FormChangePackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectMissiles.resx">
+      <DependentUpon>FormSelectMissiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCriteriaLaser.resx">
+      <DependentUpon>FormCriteriaLaser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectLasers.resx">
+      <DependentUpon>FormSelectLasers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectRace.resx">
+      <DependentUpon>FormSelectRace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSpecMissile.resx">
+      <DependentUpon>FormSpecMissile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSpecLaser.resx">
+      <DependentUpon>FormSpecLaser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="XmlEditorForm.resx">
+      <DependentUpon>XmlEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Changeling_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Changeling.ico" />
+    <Content Include="ExscriptorLib.dll" />
+    <Content Include="License %28Ionic.Zip%29.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcr71.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x2fd.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x3vfs.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XFS.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zlib1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
